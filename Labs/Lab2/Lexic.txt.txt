@@ -1,21 +1,26 @@
-Alphabet:
-a. upper and lower case letters (Aa-Zz)
-b. decimal digits
+Alphabet: 
+a. Upper case and lower case letters from English alphabet: (A-Z), (a-z)
+b. Decimal digits (0-9)
 
 Lexic:
+a. Special symbols
+	operators: + - * / < > <= >= = :=
+	separators: [ ] { } : ; space
+	reserved words: list char int else if while do begin const struct end then read write non and or
 
-a. special symbols:
-	- operators: + - * / < > <= >= \= =
-	- separators: { } ( )
-	- reserved words: list, of, if, else, not, and, or, while, read, write, struct
-b. identifiers:
-	- letter ::= "A" | "a" | "B" | ... | "Z" | "z"
-	- nonzerodigit ::= "1" | "2" | ... | "9"
-	- identifier ::= letter | letter{letter}{digit} | letter{digit}{letter}
+b. Identifiers
+	letter := "A"|"B"|...|"Z"|"a"|...|"z"
+	nonzerodigit := "1"|"2"|"3"|"4"|"5"|"6"|"7"|"8"|"9"|
+	identifier := letter|letter{letter}{digit}
 
-1. integer:
-	- number ::= digit | nonzerodigit{number}
-2. character:
-	- character ::= 'letter' | 'digit'
-3. string:
-	- string ::= character{character} | character{string}
+c. Constants
+	integer:
+		number := nonzerodigit{nonzerodigit}{0}
+		integer := "+"number|"-"number|number
+	character:
+		character := 'letter'|'nonzerodigit'|'0'
+	string: 
+		char := letter|nonzerodigit|0
+		string := char{string}
+		constchar := "string"
+		
