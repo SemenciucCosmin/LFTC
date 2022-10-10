@@ -1,0 +1,22 @@
+RELATION := < | <= | = | >= | >
+factor := ( expression ) | IDENTIFIER
+term := term * factor | factor
+expression := expression + term | term
+condition := {not} expression RELATION expression |
+assignment := IDENTIFIER := expression
+iostmt := "READ" | "WRITE" ( IDENTIFIER )
+simplestmt := assignment | iostmt
+stmt := simplestmt | structstmt
+structstmt := cmpdstmt | ifstmt | whilestmt
+cmpdstmt := "BEGIN" stmtlist "END"
+stmtlist := stmt | stmt ; stmtlist
+ifstmt := "IF" condition ""THEN" stmt "ELSE" stmt
+whilestmt := "WHILE" condition "DO" stmt
+vartype := "INTEGER" | "CHAR"
+arraydecl := "ARRAYOF" < vartype > [ NUMBER ]
+constdecl := "CONST" vartype
+structdecl := "STRUCT" "BEGIN" declarationlist "END"
+type := vartype | arraydecl | constdecl | structdecl
+declaration := IDENTIFIER : type
+declarationlist := declaration | declaration ; declarationlist
+program := "VAR" declarationlist ; cmpdstmt .
