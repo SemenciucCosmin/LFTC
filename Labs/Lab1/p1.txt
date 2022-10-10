@@ -1,0 +1,31 @@
+VAR 
+number1:INTEGER; 
+number2:INTEGER;
+number3:INTEGER;
+max:INTEGER;
+min:INTEGER;
+	BEGIN
+	READ(number1);
+	READ(number2);
+	READ(number3);
+	IF number1 > number2 THEN
+		IF number1 > number3 THEN
+			max:=number1
+		ELSE
+			max:=number3
+		IF number2 > number3 THEN
+			min:=number3
+		ELSE
+			min:=number2
+	ELSE
+		IF number2 > number3 THEN
+			max:=number2
+		ELSE
+			max:=number3;
+		IF number1 > number3 THEN
+			min:=number3
+		ELSE
+			min:=number1
+	WRITE(max);
+	WRITE(min);
+	END	

@@ -1,5 +1,5 @@
 RELATION := < | <= | = | >= | >
-factor := ( expression ) | IDENTIFIER
+factor := ( expression ) | IDENTIFIER | number | character | string
 term := term * factor | factor
 expression := expression + term | term
 condition := {not} expression RELATION expression |
@@ -10,8 +10,8 @@ stmt := simplestmt | structstmt
 structstmt := cmpdstmt | ifstmt | whilestmt
 cmpdstmt := "BEGIN" stmtlist "END"
 stmtlist := stmt | stmt ; stmtlist
-ifstmt := "IF" condition ""THEN" stmt "ELSE" stmt
-whilestmt := "WHILE" condition "DO" stmt
+ifstmt := "IF" condition ""THEN" stmtlist "ELSE" stmt
+whilestmt := "WHILE" condition "DO" stmtlist
 vartype := "INTEGER" | "CHAR"
 arraydecl := "ARRAYOF" < vartype > [ NUMBER ]
 constdecl := "CONST" vartype

@@ -1,0 +1,7 @@
+VAR 
+1number:INTEGER;
+	BEGIN
+	READ(1number);
+	1number:=08123;
+	WRITE(1number);		
+	END	

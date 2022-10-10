@@ -1,0 +1,17 @@
+VAR 
+numbers:ARRAYOF<INTEGER>[100]
+index:INTEGER;
+count:INTEGER;
+sum:INTEGER;
+	BEGIN
+	READ(count);
+	index:=0;
+	WHILE index<count DO
+		READ(numbers[index])
+		index:=index+1;
+	index:=0; 
+	sum:=0;
+	WHILE index<count DO
+		sum:=sum+numbers[index];
+	WRITE(sum);
+	END	
