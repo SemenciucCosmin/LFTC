@@ -1,0 +1,28 @@
+add_element:
+        Method for adding an element to the subtree with root element
+        element: Element, root of the subtree in which the new entry is to be added
+        name: String, the new entry to be added
+        Worst case: O(log2n)
+
+min_value_element:
+        Method that returns the element with the minimum value in the subtree with root element
+        element: Element, root of the subtree in which the search is started
+
+remove_element:
+        Method for removing an element from the subtree with root root
+        root: Element, root of the subtree from which the entry is to be removed
+        name: String, the element to be removed
+        Worst case: O(h), h-height of the binary tree
+
+print_elements:
+        Method for printing all elements in the main binary tree
+
+inorder_traversal:
+        Method for printing the subtree with root root in inorder traversal
+        root: Element, root of the subtree that is to be printed
+
+search:
+        Method for searching an element in the subtree with root root
+        root: Element, root of the subtree in which the entry is searched
+        name: String, the entry to be searched
+        Worst case: O(log2n)
