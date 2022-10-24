@@ -1,19 +1,22 @@
-class Element:
+class BST:
     def __init__(self, name):
         self.name = name
         self.left = None
         self.right = None
 
-    def add_element(self, element, name):
-        if element is None:
-            return Element(name)
+    def add_element(self, root, name):
+        if root is None:
+            return BST(name)
 
-        if name < element.name:
-            element.left = self.add_element(element.left, name)
+        if root.name is not None:
+            if name < root.name:
+                root.left = self.add_element(root.left, name)
+            else:
+                root.right = self.add_element(root.right, name)
         else:
-            element.right = self.add_element(element.right, name)
+            root.name = name
 
-        return element
+        return root
 
     @staticmethod
     def min_value_element(element):
@@ -64,9 +67,12 @@ class Element:
         return elements
 
     def search(self, root, name):
+        if root is None:
+            return False
+
         if name < root.name:
             return self.search(root.left, name)
         elif name > root.name:
             return self.search(root.right, name)
         else:
-            return root
+            return True

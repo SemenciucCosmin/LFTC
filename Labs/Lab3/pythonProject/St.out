@@ -1,0 +1,13 @@
+
+FILE: p1.txt
+	Lexically correct
+
+FILE: p2.txt
+	Lexically correct
+
+FILE: p3.txt
+	Lexically correct
+
+FILE: p1err.txt
+	Unrecognized token: "INTEGERR" on line: 2
+	Unrecognized token: "~" on line: 5

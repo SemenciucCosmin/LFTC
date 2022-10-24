@@ -71,6 +71,8 @@ Z
 ]
 {
 }
+)
+(
 :
 ;
 list 
@@ -93,3 +95,4 @@ integer
 var
 const
 struct
+arrayof

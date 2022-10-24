@@ -1,7 +1,7 @@
-from DataStructure import Element
+from DataStructure import BST
 
 
 class SymbolTable:
     def __init__(self):
-        self.identifiers = Element
-        self.constants = Element
+        self.identifiers = BST(None)
+        self.constants = BST(None)
