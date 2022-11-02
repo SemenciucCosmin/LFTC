@@ -67,7 +67,7 @@ class BST:
         return elements
 
     def search(self, root, name):
-        if root is None:
+        if root is None or root.name is None:
             return False
 
         if name < root.name:

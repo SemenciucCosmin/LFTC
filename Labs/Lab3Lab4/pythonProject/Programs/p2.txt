@@ -4,7 +4,7 @@ number2 : INTEGER ;
 	BEGIN
 	READ ( number1 ) ;
 	READ ( number2 ) ;
-	WHILE number2 not = 0 DO
+	WHILE number2 NOT = 0 DO
 		IF number1 > number2 THEN
 			number1 : = number1 - number2
 		ELSE

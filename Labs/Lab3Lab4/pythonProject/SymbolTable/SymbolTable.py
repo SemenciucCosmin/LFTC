@@ -1,4 +1,4 @@
-from DataStructure import BST
+from Labs.Lab3Lab4.pythonProject.SymbolTable.DataStructure import BST
 
 
 class SymbolTable:
