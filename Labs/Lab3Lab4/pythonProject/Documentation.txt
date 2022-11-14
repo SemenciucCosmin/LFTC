@@ -1,0 +1,3 @@
+In the finite automata I load the data from the FA.in file.
+Then for each symbol I check the list of transitions and chance the current state.
+If a foreign symbol that is not declared in the alphabet of the FA is received then an error message is displayed.
